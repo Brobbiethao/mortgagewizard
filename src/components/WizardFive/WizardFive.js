@@ -12,8 +12,8 @@ class WizardFive extends Component {
 
                     <p>Are you currently working with a real estate agent?</p> <br />
                     <div className="row">
-                        <Link to="/wSix"><button onClick={ ( e ) => updateAgent( true )}>Yes</button></Link>
-                        <Link to="/wSix"><button onClick={ ( e ) => updateAgent( false )}>No </button></Link>
+                        <Link to="/wSix"><button onClick={ ( e ) => updateAgent( 'Yes' )}>Yes</button></Link>
+                        <Link to="/wSix"><button onClick={ ( e ) => updateAgent( 'No' )}>No </button></Link>
                     </div>
                 </div>
             </div>
@@ -22,10 +22,10 @@ class WizardFive extends Component {
 }
 
 function mapStateToProps ( state ) {
-    const { agent } = state;
+    const { realEstateAgent } = state;
     return {
-        agent
+        realEstateAgent
     }
 }
 
-export default connect( mapStateToProps, { updateAgent}) ( WizardFive);
+export default connect( mapStateToProps, { updateAgent}) (WizardFive);
